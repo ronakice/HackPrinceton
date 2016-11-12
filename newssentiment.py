@@ -13,6 +13,7 @@ class SentimentVader:
 
     def tokenizetext(self):
         self.lines_list = tokenize.sent_tokenize(self.text)
+        
     def Senttext(self):
         self.tokenizetext()
         sid = SentimentIntensityAnalyzer()
