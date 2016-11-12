@@ -2,7 +2,7 @@ import tweepy
 from textblob import TextBlob
 import newssentiment
 from newssentiment import SentimentVader
-# Step 1 - Authenticate
+# Authenticate
 consumer_key= 'O5FbmtO56q7mF7az8fEsjpKqg'
 consumer_secret= 'X6Mfqjkoxi6iDNQq0NjIkFkr817yI8CApDHeChLExUxfWD6WXB'
 
@@ -14,20 +14,32 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-#Step 3 - Retrieve Tweets
-public_tweets = api.search('Trump')
-for tweet in public_tweets:
-    print(tweet.text)
+#Retrieve Tweets
+keywords=['Trump', 'Hillary', 'brexit', 'America']
+for j in keywords:
+    public_tweets = api.search(j)
+    Z=[]
+    for tweet in public_tweets:
+        temp=[]
+        #print(tweet.text)
 
-    #Step 4 Perform Sentiment Analysis on Tweets
-    analysis = TextBlob(tweet.text)
-    print(analysis.sentiment)
-    d=SentimentVader(tweet.text)
-    d.Senttext()
-    X=[]
-    for i in d.sslist:
-        X.append(i['compound'])
-    print(sum(X)/float(len(X)))
-    #print(d.sslist)
-    #print()
-    print("")
+        #Step 4 Perform Sentiment Analysis on Tweets
+        analysis = TextBlob(tweet.text)
+        temp.append(analysis.sentiment.polarity * analysis.sentiment.subjectivity)
+        #print(analysis.sentiment.polarity * analysis.sentiment.subjectivity)
+        d=SentimentVader(tweet.text)
+        d.Senttext()
+        X=[]
+        for i in d.sslist:
+            X.append(i['compound'])
+        temp.append(sum(X)/float(len(X)))
+        #print(temp[1])
+        #print("AVG POLARITY: ")
+        Z.append(sum(temp)/float(len(temp)))
+        #print(sum(temp)/float(len(temp)))
+        #print(d.sslist)
+        #print()
+        #print("")
+    print(j)
+    print(Z)
+    print(sum(Z)/float(len(Z)))

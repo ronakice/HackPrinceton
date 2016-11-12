@@ -32,4 +32,4 @@ Britain decides to call it quit, leaves Europe causing nation to be in turmoil.
 Donald Trump made President of the United States, country in danger.'''
 d = SentimentVader(text)
 d.Senttext()
-print(d.sslist)
+#print(d.sslist)
