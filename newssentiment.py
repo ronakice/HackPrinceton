@@ -17,15 +17,16 @@ class SentimentVader:
         self.tokenizetext()
         sid = SentimentIntensityAnalyzer()
         for sentence in self.lines_list:
-            print(sentence)
+            #print(sentence)
             m=sid.polarity_scores(sentence)
             self.sslist.append(sid.polarity_scores(sentence))
             t=len(self.sslist)
             for k in sorted(self.sslist[t-1]):
-                print('{0}: {1}, '.format(k, self.sslist[t-1][k]))
-            print("\n")
+                pass
+                #print('{0}: {1}, '.format(k, self.sslist[t-1][k]))
+            #print("\n")
 
-text='''There has been a devastating earthquake in the Indian Ocean.
+text= '''There has been a devastating earthquake in the Indian Ocean.
 Tsunami hits Japan, thousands of people dead.
 Britain decides to call it quit, leaves Europe causing nation to be in turmoil.
 Donald Trump made President of the United States, country in danger.'''
