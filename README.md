@@ -1,4 +1,4 @@
-# HackPrinceton
+# The Word on the Streets - HackPrinceton
 ##Installation
 ######pip install -r requirements.txt
 
