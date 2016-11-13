@@ -111,6 +111,7 @@ for i in range(0,len(x)):
 plt.legend(loc=2)
 
 print("GOO")
+plt.savefig('news.png')
 plt.show()
 r=[]
 x=[]
@@ -128,5 +129,6 @@ for i in range(0,len(x)):
 	else:
 		plt.scatter(x[i],0, r[i]/1.0, c=random.rand(3,1),label=lab[i].replace("%20"," "),alpha=0.5)
 plt.legend(loc=2)
+plt.savefig('twitter.png')
 plt.show()
 #plt.show()
