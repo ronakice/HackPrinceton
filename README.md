@@ -18,7 +18,7 @@ Of interest in various fields in FinTech as flag indicators for Economic Catastr
 ####
 It provides a quantitative estimate of the impact of Social, Political, Natural and Economic events.
 
-##Results
+##Results (Between 2016-06-01 and 2016-07-01)
 ###Guardian News:
 ![alt text](https://github.com/ronakice/HackPrinceton/blob/master/news.png)
 
