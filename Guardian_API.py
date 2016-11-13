@@ -72,8 +72,61 @@ def Finale():
 	for i in Y.keys():
 		Sent[i]["occurrances"]=Y[i][0]
 		Sent[i]["sentiment"]["twitter"]=j[i]
-
-
+	t1=[]
+	ct=0
+	for i in Y.keys():
+		ct=ct+1
+		l={}
+		l["name"]=i
+		l["occurances"]=Y[i][0]
+		l["news"]=Sent[i]["sentiment"]["news"]
+		l["twitter"]=Sent[i]["sentiment"]["twitter"]
+		l=json.dumps(l)
+		d = json.loads(l)
+		t1.append(d)
 	tempe= json.dumps(Sent)
-	return tempe
+	return t1,Sent
 print(Finale())
+teee,ss=Finale()
+import matplotlib.pyplot as plt
+r=[]
+x=[]
+lab=[]
+print(ss)
+for i in teee:
+	x.append(i["news"])
+	r.append(i["occurances"]/1.0)
+	lab.append(i["name"])
+with open('data21.txt', 'w') as outfile:
+    json.dump(ss, outfile)
+from numpy import random
+plt.xlabel('News Sentiment (-1  -  1)')
+
+for i in range(0,len(x)):
+	if x[i]<0.0:
+		plt.scatter(x[i],0 , r[i]/1.0, c=random.rand(3,1),label=lab[i].replace("%20"," "),alpha=0.5)
+
+	else:
+		plt.scatter(x[i],0, r[i]/1.0, c=random.rand(3,1),label=lab[i].replace("%20"," "),alpha=0.5)
+plt.legend(loc=2)
+
+print("GOO")
+plt.show()
+r=[]
+x=[]
+lab=[]
+for i in teee:
+	x.append(i["twitter"])
+	r.append(i["occurances"]/1.0)
+	lab.append(i["name"])
+plt.xlabel('Twitter Sentiment (-1  -  1)')
+
+for i in range(0,len(x)):
+	if x[i]<0.0:
+		plt.scatter(x[i],0 , r[i]/1.0, c=random.rand(3,1),label=lab[i].replace("%20"," "),alpha=0.5)
+
+	else:
+		plt.scatter(x[i],0, r[i]/1.0, c=random.rand(3,1),label=lab[i].replace("%20"," "),alpha=0.5)
+plt.legend(loc=2)
+plt.show()
+#plt.show()
