@@ -16,11 +16,11 @@ Visualization of Data.
 ####
 Of interest in various fields in FinTech as flag indicators for Economic Catastrophies as a result of radical Political Change / Natural Disasters. 
 ####
-It provides a quantitative estimate of the impact of Social, Political, Natural and Economic Events.
+It provides a quantitative estimate of the impact of Social, Political, Natural and Economic events.
 
-
-##Guardian News:
+##Results
+###Guardian News:
 ![alt text](https://github.com/ronakice/HackPrinceton/blob/master/news.png)
 
-##Twitter:
+###Twitter:
 ![alt text](https://github.com/ronakice/HackPrinceton/blob/master/twitter.png)
