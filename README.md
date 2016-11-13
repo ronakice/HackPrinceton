@@ -1,9 +1,13 @@
 # HackPrinceton
 ##Installation
-pip install -r requirements.txt
+###pip install -r requirements.txt
 
 ##Run
-python
+
+###python Guardian_API.py
+
+###Fill in the form, select Show and then click Next
+
 Sentiment Analysis of Twitter and News
 Used Natural Language Processing (Vader Sentiment Analysis techniques) and Microsoft Cognitive Services to predict sentiment of topics from Twitter and Guardian. 
 Visualization of Data.
