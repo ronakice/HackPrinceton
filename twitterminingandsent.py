@@ -2,6 +2,7 @@ import tweepy
 from textblob import TextBlob
 import newssentiment
 from newssentiment import SentimentVader
+import newssentiment
 # Authenticate
 consumer_key= 'O5FbmtO56q7mF7az8fEsjpKqg'
 consumer_secret= 'X6Mfqjkoxi6iDNQq0NjIkFkr817yI8CApDHeChLExUxfWD6WXB'
@@ -18,7 +19,7 @@ import urllib
 import sys
 import base64
 import json
-def printsent():
+def printsent(keywords):
     # Azure portal URL.
     base_url = 'https://westus.api.cognitive.microsoft.com/'
     # Your account key goes here.
@@ -27,8 +28,8 @@ def printsent():
     headers = {'Content-Type':'application/json', 'Ocp-Apim-Subscription-Key':account_key}
 
     #Retrieve Tweets
-    keywords=['Trump', 'Hillary', 'brexit', 'America','death','bad','terrible','good']
 
+    twitt={}
     for j in keywords:
         input_texts = {"documents":[]}
         public_tweets = api.search(j)
@@ -59,7 +60,6 @@ def printsent():
             #print(d.sslist)
             #print()
             #print("")
-        import flask
         input_texts= json.dumps(input_texts)
         batch_sentiment_url = base_url + 'text/analytics/v2.0/sentiment'
         #print(batch_sentiment_url)
@@ -73,9 +73,11 @@ def printsent():
             xe.append(sentiment_analysis['score']*2 - 1)
             #print('Sentiment ' + str(sentiment_analysis['id']) + ' score: ' + str(sentiment_analysis['score']*2 - 1))
         #print(input_texts)
-        print(j)
+        #print(j)
+
         #print(Z)
         #print(sum(Z)/float(len(Z)))
         #print(sum(xe)/float(len(xe)))
-        print((2.0/3.0) * (sum(Z)/float(len(Z))) + (1.0/3.0)* (sum(xe)/float(len(xe))))
-printsent()
+        #print((2.0/3.0) * (sum(Z)/float(len(Z))) + (1.0/3.0)* (sum(xe)/float(len(xe))))
+        twitt[j]=(2.0/3.0) * (sum(Z)/float(len(Z))) + (1.0/3.0)* (sum(xe)/float(len(xe)))
+    return twitt

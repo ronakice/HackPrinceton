@@ -13,7 +13,7 @@ class SentimentVader:
 
     def tokenizetext(self):
         self.lines_list = tokenize.sent_tokenize(self.text)
-        
+
     def Senttext(self):
         self.tokenizetext()
         sid = SentimentIntensityAnalyzer()
@@ -27,10 +27,5 @@ class SentimentVader:
                 #print('{0}: {1}, '.format(k, self.sslist[t-1][k]))
             #print("\n")
 
-text= '''There has been a devastating earthquake in the Indian Ocean.
-Tsunami hits Japan, thousands of people dead.
-Britain decides to call it quit, leaves Europe causing nation to be in turmoil.
-Donald Trump made President of the United States, country in danger.'''
-d = SentimentVader(text)
-d.Senttext()
+
 #print(d.sslist)
