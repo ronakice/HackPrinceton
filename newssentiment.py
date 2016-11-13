@@ -1,3 +1,5 @@
+import nltk
+nltk.data.path.append("./nltk_data")
 from nltk.sentiment import SentimentAnalyzer
 from nltk.sentiment.util import *
 from nltk.classify import NaiveBayesClassifier

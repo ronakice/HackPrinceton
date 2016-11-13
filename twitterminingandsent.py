@@ -1,4 +1,6 @@
 import tweepy
+import nltk
+nltk.data.path.append("./nltk_data")
 from textblob import TextBlob
 import newssentiment
 from newssentiment import SentimentVader

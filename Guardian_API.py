@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 import json
+import nltk
+nltk.data.path.append("./nltk_data")
 import urllib2
 import newssentiment
 from newssentiment import SentimentVader
