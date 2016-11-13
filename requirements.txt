@@ -1,0 +1,7 @@
+tweepy
+nltk
+json
+urllib2
+urllib
+sys
+base64

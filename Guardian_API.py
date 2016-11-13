@@ -72,6 +72,6 @@ def Finale():
 		Sent[i]["sentiment"]["twitter"]=j[i]
 
 
-	Sent= json.dumps(Sent)
-	return Sent
+	tempe= json.dumps(Sent)
+	return tempe
 print(Finale())
