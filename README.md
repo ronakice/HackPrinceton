@@ -24,3 +24,12 @@ It provides a quantitative estimate of the impact of Social, Political, Natural 
 
 ###Twitter:
 ![alt text](https://github.com/ronakice/HackPrinceton/blob/master/twitter.png)
+
+##Results (Between "2016-06-10" and "2016-09-11")
+###Guardian News:
+![alt text](https://github.com/ronakice/HackPrinceton/blob/master/Screen%20Shot%202016-11-13%20at%203.10.17%20AM.png)
+
+###Twitter:
+![alt text](https://github.com/ronakice/HackPrinceton/blob/master/Screen%20Shot%202016-11-13%20at%203.10.22%20AM.png)
+
+This was around the time there were rumours about Google surpressing their Hillary Clinton results and Pokemon Go was super great. But you can notice that Trump and Hillary were still the centres of attention(bigger circle radii).
