@@ -1,4 +1,4 @@
-# The Word on the Streets - HackPrinceton
+# The Word on the Streets - HackPrinceton Finalists (Top 10)
 ##Installation
 ######pip install -r requirements.txt
 
